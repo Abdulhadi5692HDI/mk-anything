@@ -1,0 +1,21 @@
+#!/bin/sh
+# Example script ... Customize it!
+# Add as a function
+app() {
+# Add a warning if using a module manager (etc, gem, pip,npm)
+#echo "Warning: If <module manager> is not installed please install it"
+echo "Starting.."
+#sleep <any value> (must be bellow 10)
+echo "Making files.."
+sleep 3
+mkdir $*
+cd $*
+mkdir src
+echo "
+; Add anything here
+" > src/$*.ini
+# You can make it initalize a git repo
+echo "Done"
+}
+app $*
+
